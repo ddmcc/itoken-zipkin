@@ -11,5 +11,5 @@ ADD . /app/
 WORKDIR /app
 RUN mvn clean package
 #CMD java -jar /app/target/itoken-zipkin-1.0.0-SNAPSHOT.jar --spring.profiles.active=prod
-ENTRYPOINT ["dockerize", "-timeout", "5m", "-wait", "http://192.168.171.135:8761/", "java", "-jar", "/app/target/itoken-zipkin-1.0.0-SNAPSHOT.jar", "--spring.profiles.active=prod"]
+ENTRYPOINT ["dockerize", "-timeout", "5m", "-wait", "http://106.14.133.27:8761/", "java", "-jar", "/app/target/itoken-zipkin-1.0.0-SNAPSHOT.jar", "--spring.profiles.active=prod"]
 EXPOSE 9411
